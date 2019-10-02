@@ -1,0 +1,21 @@
+{
+  "name": "node_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "babel": "./node_modules/.bin/babel res/browser.js -d build/",
+    "uglify": "./node_modules/.bin/uglifyjs build/res/browser.js -o build/res/browser.min.js",
+    "build": "npm run babel && npm run uglify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "uglify-es": "^3.3.9"
+  }
+}
